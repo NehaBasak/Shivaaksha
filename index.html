@@ -18,6 +18,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -286,17 +287,39 @@
         <div class="row g-4">
           <div class="col-lg-4">
             <div class="footer-logo">
-              <a href="./index.html"
-                ><img
+              <a href="./index.html">
+                <img
                   src="./assets/Shivaaksha Abstract People Logo.png"
                   alt="Shivaaksha CodeCraft Academy Logo"
-              /></a>
+                />
+              </a>
             </div>
+
             <h4>Shivaaksha CodeCraft Academy</h4>
+
             <p>
               Empowering learners and businesses through technology, innovation
               and practical knowledge.
             </p>
+
+            <!-- Social Media Icons -->
+            <div class="footer-social">
+              <a href="#" target="_blank" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+
+              <a href="#" target="_blank" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+
+              <a href="#" target="_blank" aria-label="Twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+
+              <a href="#" target="_blank" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
           </div>
 
           <div class="col-lg-2 col-6">
@@ -318,7 +341,7 @@
           </div>
 
           <div class="col-lg-3">
-            <h5>Contact Us</h5>
+            <h5>Contact Info</h5>
             <a href=""><i class="fas fa-phone"></i> +91 8777635624</a>
             <a href=""><i class="fas fa-envelope"></i> info@shivaaksha.com</a>
             <a href="">
@@ -356,6 +379,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- JAVA SCRIPT -->
+
+    <!-- Counter Effect -->
     <script src="js/script.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -382,6 +407,22 @@
 
           updateCounter();
         });
+      });
+    </script>
+
+    <!-- Kursor JS -->
+    <script src="https://unpkg.com/kursor"></script>
+
+    <script>
+      window.addEventListener("load", function () {
+        if (typeof kursor !== "undefined") {
+          new kursor({
+            type: 1,
+            color: "#bed3ec",
+          });
+        } else {
+          console.error("Kursor library not loaded!");
+        }
       });
     </script>
   </body>

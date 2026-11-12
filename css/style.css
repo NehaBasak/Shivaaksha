@@ -319,22 +319,22 @@ img {
 } */
 
 .hero-stats {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-top: 55px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 55px;
 }
 
 .hero-stats h3 {
-    font-size: 27px;
-    color: #a69aff;
-    font-weight: 800;
-    margin-bottom: 5px;
+  font-size: 27px;
+  color: #a69aff;
+  font-weight: 800;
+  margin-bottom: 5px;
 }
 
 .hero-stats p {
-    font-size: 12px;
-    margin: 0;
+  font-size: 12px;
+  margin: 0;
 }
 
 /* ===============================
@@ -417,7 +417,7 @@ img {
 /* ===============================
    COURSE CARDS
 ================================ */
-.course-card {
+/* .course-card {
   height: 100%;
   overflow: hidden;
   border-radius: 16px;
@@ -429,7 +429,28 @@ img {
 .course-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 35px rgba(99, 91, 255, 0.2);
+} */
+
+.course-card {
+  height: 100%;
+  border-radius: 20px;
+  background: var(--dark-card);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.5s ease;
 }
+
+.course-card:hover {
+  transform: translateY(-10px);
+  background: linear-gradient(
+    135deg,
+    rgba(242, 10, 53, 0.15),
+    rgba(121, 0, 141, 0.2),
+    rgba(7, 156, 145, 0.12)
+  );
+  border-color: rgba(242, 10, 53, 0.5);
+  box-shadow: 0 15px 35px rgba(121, 0, 141, 0.2);
+}
+
 
 .course-card img {
   width: 100%;
@@ -620,9 +641,9 @@ img {
 }
 
 .footer h5 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .footer a {
@@ -634,13 +655,45 @@ img {
 }
 
 .footer a:hover {
-  color: #9b8cff;
+  color: transparent;
+  background: linear-gradient(45deg, #f20a35, #79008d);
+  -webkit-background-clip: text;
+  background-clip: text;
   padding-left: 5px;
+  transform: scale(1.08);
 }
 
 .footer hr {
   border-color: #394054;
   margin: 35px 0 25px;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 17px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  background: linear-gradient(45deg, #f20a35, #79008d);
+  border-color: transparent;
+  color: #fff;
+  transform: translateY(-5px);
 }
 
 /* ===============================
