@@ -79,8 +79,9 @@
             </h1>
 
             <p>
-              Empowering students and businesses through professional IT
-              training, web development and innovative digital solutions.
+              Empowering students with industry-ready IT skills while helping
+              businesses grow through professional training, web development,
+              and innovative digital solutions.
             </p>
 
             <div class="hero-buttons">
@@ -94,15 +95,17 @@
 
             <div class="hero-stats">
               <div>
-                <h3>10+</h3>
+                <h3 class="counter" data-target="10" data-suffix="+">0</h3>
                 <p>Learning Programs</p>
               </div>
+
               <div>
-                <h3>100%</h3>
+                <h3 class="counter" data-target="100" data-suffix="%">0</h3>
                 <p>Practical Focus</p>
               </div>
+
               <div>
-                <h3>24/7</h3>
+                <h3 class="counter" data-target="24" data-suffix="/7">0</h3>
                 <p>Online Enquiry</p>
               </div>
             </div>
@@ -136,9 +139,12 @@
               Creating Digital Excellence Through Technology
             </h2>
             <p class="section-text">
-              Shivaaksha CodeCraft Academy focuses on building technical skills
-              and delivering modern digital solutions. We help students learn
-              industry-relevant technologies and help businesses grow digitally.
+              Shivaaksha CodeCraft Academy empowers students with
+              industry-relevant technical skills while delivering innovative
+              digital solutions. We provide practical training in modern
+              technologies and help businesses strengthen their online presence,
+              improve efficiency, and achieve sustainable growth through
+              creative, reliable, and technology-driven solutions.
             </p>
             <a href="about.html" class="btn btn-primary">Discover More</a>
           </div>
@@ -246,7 +252,10 @@
 
           <div class="col-md-6 col-lg-3">
             <div class="course-card">
-              <img src="./assets/java-web-application-developement.png" alt="Java" />
+              <img
+                src="./assets/java-web-application-developement.png"
+                alt="Java"
+              />
               <div class="course-content">
                 <h4>Java Programming</h4>
                 <p>Core Java and OOP concepts.</p>
@@ -277,9 +286,10 @@
         <div class="row g-4">
           <div class="col-lg-4">
             <div class="footer-logo">
-             <a href="./index.html"><img
-                src="./assets/Shivaaksha Abstract People Logo.png"
-                alt="Shivaaksha CodeCraft Academy Logo"
+              <a href="./index.html"
+                ><img
+                  src="./assets/Shivaaksha Abstract People Logo.png"
+                  alt="Shivaaksha CodeCraft Academy Logo"
               /></a>
             </div>
             <h4>Shivaaksha CodeCraft Academy</h4>
@@ -295,6 +305,7 @@
             <a href="about.html">About</a>
             <a href="courses.html">Courses</a>
             <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
           </div>
 
           <div class="col-lg-3 col-6">
@@ -303,24 +314,23 @@
             <a href="services.html">Software Development</a>
             <a href="services.html">Digital Marketing</a>
             <a href="courses.html">IT Training</a>
+            <a href="courses.html">UI/UX Design</a>
           </div>
 
           <div class="col-lg-3">
             <h5>Contact Us</h5>
-            <p><i class="fas fa-phone"></i> +91 8777635624</p>
-            <p><i class="fas fa-envelope"></i> info@shivaaksha.com</p>
-            <p>
+            <a href=""><i class="fas fa-phone"></i> +91 8777635624</a>
+            <a href=""><i class="fas fa-envelope"></i> info@shivaaksha.com</a>
+            <a href="">
               <i class="fa-solid fa-location-dot"></i> Corporate office Address-
               Salt Lake Electronics Complex, Stesalit Tower, GP Block, Sector V,
-              Bidhannagar, West Bengal 700091 
-              Traning Centre Address- Burdwan,
+              Bidhannagar, West Bengal 700091 Traning Centre Address- Burdwan,
               Medinipur, Bankura
-            </p>
-            <p>
-              <i class="fa-solid fa-location-dot"></i> 
-              Traning Centre Address- Burdwan,
-              Medinipur, Bankura
-            </p>
+            </a>
+            <a href="">
+              <i class="fa-solid fa-location-dot"></i>
+              Traning Centre Address- Burdwan, Medinipur, Bankura
+            </a>
           </div>
         </div>
 
@@ -344,6 +354,35 @@
     </a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JAVA SCRIPT -->
     <script src="js/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const counters = document.querySelectorAll(".counter");
+
+        counters.forEach((counter) => {
+          const target = Number(counter.dataset.target);
+          const suffix = counter.dataset.suffix || "";
+
+          let count = 0;
+          const duration = 5000;
+          const increment = target / (duration / 20);
+
+          const updateCounter = () => {
+            count += increment;
+
+            if (count < target) {
+              counter.innerText = Math.ceil(count) + suffix;
+              setTimeout(updateCounter, 20);
+            } else {
+              counter.innerText = target + suffix;
+            }
+          };
+
+          updateCounter();
+        });
+      });
+    </script>
   </body>
 </html>
