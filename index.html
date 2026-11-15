@@ -19,6 +19,7 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Navbar -->
@@ -80,7 +81,10 @@
 
             <h1>
               Build Your Future With
-              <span class="typing-text">Technology & <br> Innovation</span>
+              <span class="typing-text"
+                >Technology & <br />
+                Innovation</span
+              >
             </h1>
 
             <p>
@@ -132,11 +136,17 @@
       <div class="container">
         <div class="row align-items-center g-5">
           <div class="col-lg-6">
-            <img
-              src="./assets/about-us-information-service-sharing-join-concept_53876-124056.avif"
-              class="about-image"
-              alt="About Shivaaksha"
-            />
+            <div
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
+              <img
+                src="./assets/about-us-information-service-sharing-join-concept_53876-124056.avif"
+                class="about-image"
+                alt="About Shivaaksha"
+              />
+            </div>
           </div>
           <div class="col-lg-6">
             <span class="section-tag">ABOUT US</span>
@@ -168,38 +178,46 @@
 
         <div class="row g-4">
           <div class="col-md-6 col-lg-3">
-            <div class="service-card">
-              <i class="fas fa-code"></i>
-              <h4>Web Development</h4>
-              <p>Responsive and professional business websites.</p>
-              <a href="services.html">Learn More →</a>
+            <div data-aos="flip-left">
+              <div class="service-card">
+                <i class="fas fa-code"></i>
+                <h4>Web Development</h4>
+                <p>Responsive and professional business websites.</p>
+                <a href="services.html">Learn More →</a>
+              </div>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-3">
-            <div class="service-card">
-              <i class="fas fa-laptop-code"></i>
-              <h4>Software Development</h4>
-              <p>Custom software solutions for businesses.</p>
-              <a href="services.html">Learn More →</a>
+            <div data-aos="flip-right">
+              <div class="service-card">
+                <i class="fas fa-laptop-code"></i>
+                <h4>Software Development</h4>
+                <p>Custom software solutions for businesses.</p>
+                <a href="services.html">Learn More →</a>
+              </div>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-3">
-            <div class="service-card">
-              <i class="fas fa-mobile-screen"></i>
-              <h4>App Development</h4>
-              <p>Modern mobile application development.</p>
-              <a href="services.html">Learn More →</a>
+            <div data-aos="flip-left">
+              <div class="service-card">
+                <i class="fas fa-mobile-screen"></i>
+                <h4>App Development</h4>
+                <p>Modern mobile application development.</p>
+                <a href="services.html">Learn More →</a>
+              </div>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-3">
-            <div class="service-card">
-              <i class="fas fa-bullhorn"></i>
-              <h4>Digital Marketing</h4>
-              <p>Grow your brand with digital marketing.</p>
-              <a href="services.html">Learn More →</a>
+            <div data-aos="flip-right">
+              <div class="service-card">
+                <i class="fas fa-bullhorn"></i>
+                <h4>Digital Marketing</h4>
+                <p>Grow your brand with digital marketing.</p>
+                <a href="services.html">Learn More →</a>
+              </div>
             </div>
           </div>
         </div>
@@ -434,7 +452,7 @@
       });
     </script>
 
-<!-- Welcome Letter Up And Down -->
+    <!-- Welcome Letter Up And Down -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const words = document.querySelectorAll(".hero-tag > span");
@@ -458,6 +476,10 @@
           });
         });
       });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
   </body>
 </html>
